@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "AT Realm";
+  src: url("/fonts/AT-Realm-v08-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-heading: "AT Realm", system-ui, sans-serif;
 }
 
 @theme inline {
@@ -18,8 +26,13 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
 /* MDX prose defaults */
 .prose h2 {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 600;
   margin-top: 2.5rem;
@@ -28,6 +41,7 @@ body {
 }
 
 .prose h3 {
+  font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 600;
   margin-top: 2rem;
