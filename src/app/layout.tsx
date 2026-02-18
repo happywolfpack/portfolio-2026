@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PasswordGate from "@/components/PasswordGate";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,9 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Header />
-        <main className="min-h-[calc(100vh-140px)]">{children}</main>
-        <Footer />
+        <PasswordGate>
+          <Header />
+          <main className="min-h-[calc(100vh-140px)]">{children}</main>
+          <Footer />
+        </PasswordGate>
       </body>
     </html>
   );
