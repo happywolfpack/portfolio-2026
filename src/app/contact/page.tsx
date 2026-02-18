@@ -14,10 +14,10 @@ export default function ContactPage() {
         <div>
           <h2 className="text-sm font-medium uppercase tracking-wider text-gray-400">Email</h2>
           <a
-            href="mailto:hello@alecdavy.com"
+            href="mailto:davy.alec@gmail.com"
             className="mt-2 inline-block text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
           >
-            hello@alecdavy.com
+            davy.alec@gmail.com
           </a>
         </div>
 
