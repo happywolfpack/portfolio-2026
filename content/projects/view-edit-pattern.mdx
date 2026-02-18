@@ -1,0 +1,81 @@
+---
+title: "Defining the View/Edit Pattern at Buildertrend"
+description: "How we coordinated design work, tested user expectations, and surfaced organizational misalignments"
+role: "Pattern design, usability testing, guideline creation"
+team: "Harriet Hughes, Michael Leal, Wes Jones"
+timeline: "~3 months, 2025"
+tags: ["UX Research", "Interaction Design", "Design Systems"]
+thumbnail: "/images/projects/view-edit-pattern/view-state-schedule.png"
+featured: true
+order: 1
+---
+
+## Overview
+
+Buildertrend was transitioning to a structured model distinguishing editable from read-only content. I helped coordinate early design work, conduct user testing, and surface organizational misalignments that needed to be resolved before the pattern could scale.
+
+## The Problem
+
+The original UI presented all content in an editable state regardless of context. This created a cluttered, form-heavy experience that reduced scannability and increased cognitive load.
+
+The solution direction was clear: introduce a true view state to simplify the interface and make important actions more prominent. Supporting data showed that most entities were viewed far more than edited, and "view/edit patterns" ranked in the top-3 needs across teams.
+
+<BeforeAfter beforeLabel="Before: Perpetual edit mode" afterLabel="After: View state concept">
+  <img src="/images/projects/view-edit-pattern/perpetual-edit-schedule.png" alt="Perpetual edit-mode schedule item" />
+  <img src="/images/projects/view-edit-pattern/view-state-schedule.png" alt="View mode concept schedule item" />
+</BeforeAfter>
+
+## Laying the Groundwork
+
+I took several steps to move the pattern forward across the organization:
+
+<ProcessStep number={1} title="Created a shared Figma file">
+Built a cross-team Figma file for view/edit explorations, giving designers a common space to align on direction.
+</ProcessStep>
+
+<ProcessStep number={2} title="Planned and ran usability testing">
+Tested on lower-risk implementation features to validate the pattern before scaling it to higher-stakes areas.
+</ProcessStep>
+
+<ProcessStep number={3} title="Shared findings with senior designers">
+Surfaced findings and edge cases with the broader design team so decisions could be informed by real user behavior.
+</ProcessStep>
+
+<ProcessStep number={4} title="Flagged implementation divergence">
+Identified that teams were interpreting the pattern differently, which catalyzed formal governance creation.
+</ProcessStep>
+
+<img src="/images/projects/view-edit-pattern/shared-figma-file.png" alt="Shared Figma file for cross-team view/edit explorations" />
+
+<Callout type="insight">
+Users overwhelmingly expected "Save" to return them to their previous context — a key finding that shaped the final pattern direction.
+</Callout>
+
+## Driving Alignment
+
+Testing revealed conflicting interpretations across teams. There was a disconnect between user expectations and financial workflow requirements that needed organizational resolution.
+
+Design leadership responded by creating a cross-functional working group with directors from design, product, and architecture. Together, we established three foundational decisions:
+
+1. **Return users to previous context** after saving (when no follow-up action is needed)
+2. **Elevate "Send" as the primary action** in create/edit modes
+3. **Define editability rules** based on item status and context
+
+<BeforeAfter beforeLabel="Before: Save keeps users on item" afterLabel="After: Send elevated, save returns">
+  <img src="/images/projects/view-edit-pattern/save-as-primary.png" alt="Save transitions to view state, keeps users on item" />
+  <img src="/images/projects/view-edit-pattern/send-as-primary.png" alt="Elevating send action allows save to act as return mechanism" />
+</BeforeAfter>
+
+## Looking Forward
+
+Implementation is ongoing, but the foundation is established — a shared interaction model and aligned decisions documented in updated guidelines.
+
+## Takeaways
+
+<Callout type="note">
+1. **Strategic clarity requires structural support.** Organizational alignment doesn't happen through design artifacts alone — it needs cross-functional governance.
+
+2. **Impact without formal leadership.** By building connections and elevating patterns, I influenced platform-wide change without a leadership title.
+
+3. **Early initiative surfaces misalignments.** Taking initiative early meant we found the real problems before they became entrenched in shipped features.
+</Callout>

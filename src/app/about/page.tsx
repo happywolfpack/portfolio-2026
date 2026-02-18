@@ -7,31 +7,43 @@ export default function AboutPage() {
     <div className="mx-auto max-w-3xl px-6 py-16">
       <h1 className="text-3xl font-bold tracking-tight text-gray-900">About</h1>
 
-      <div className="mt-8 space-y-6 text-gray-600 leading-relaxed">
-        <p>
-          I&apos;m Alec Davy, a UX and Product Designer passionate about creating digital
-          experiences that are both beautiful and functional. I believe great design starts with
-          deeply understanding the people who will use it.
-        </p>
-        <p>
-          With experience spanning research, interaction design, and prototyping, I bring a
-          holistic approach to product design. I thrive in collaborative environments where
-          design and engineering work closely together.
-        </p>
+      <div className="mt-8 flex flex-col gap-8 sm:flex-row">
+        <img
+          src="/images/about/alec-arnold.jpg"
+          alt="Alec and Arnold on the Blue Ridge Mountain Parkway"
+          className="h-64 w-64 rounded-lg object-cover sm:shrink-0"
+        />
+        <div className="space-y-6 text-gray-600 leading-relaxed">
+          <p>
+            I&apos;m Alec Davy, a product designer based in Atlanta, Georgia. I currently
+            create and maintain the design system at Buildertrend, a project management tool
+            for residential construction contractors.
+          </p>
+          <p>
+            I&apos;m passionate about creating things that people enjoy — or at the very least
+            find useful and usable. My greatest satisfaction comes from learning how to improve
+            products and services, then applying those insights to create positive impacts on
+            users&apos; daily experiences.
+          </p>
+          <p>
+            Outside of work, I explore Georgia with my fiancée and dog, play soccer, and
+            participate in chili cooking contests.
+          </p>
+        </div>
       </div>
 
       <div className="mt-12">
         <h2 className="text-sm font-medium uppercase tracking-wider text-gray-400">Skills</h2>
         <div className="mt-4 flex flex-wrap gap-2">
           {[
+            "Design Systems",
             "UX Research",
             "Interaction Design",
+            "Usability Testing",
             "Prototyping",
-            "Design Systems",
-            "User Testing",
-            "Wireframing",
             "Figma",
             "Product Strategy",
+            "Wireframing",
           ].map((skill) => (
             <span
               key={skill}
@@ -49,12 +61,8 @@ export default function AboutPage() {
         </h2>
         <div className="mt-4 space-y-6">
           <div>
-            <h3 className="font-medium text-gray-900">Product Designer</h3>
-            <p className="text-sm text-gray-500">Company Name &middot; 2023 &ndash; Present</p>
-          </div>
-          <div>
-            <h3 className="font-medium text-gray-900">UX Designer</h3>
-            <p className="text-sm text-gray-500">Previous Company &middot; 2021 &ndash; 2023</p>
+            <h3 className="font-medium text-gray-900">Design System Creator</h3>
+            <p className="text-sm text-gray-500">Buildertrend &middot; Present</p>
           </div>
         </div>
       </div>

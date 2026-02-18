@@ -1,0 +1,81 @@
+---
+title: "Evaluating and Redesigning Navigation to Address Churn"
+description: "Exploring whether navigation improvements could address user overwhelm and churn at Buildertrend"
+role: "User Interviewer/Tester, Prototyper"
+team: "Than Sidwell, Matt Donovan, Layne Russell"
+timeline: "~1 month, 2023"
+tags: ["UX Research", "Navigation", "Usability Testing"]
+thumbnail: "/images/projects/navigation-redesign/nav-expanded.png"
+featured: true
+order: 2
+---
+
+## Overview
+
+One of the top reasons users cancel Buildertrend subscriptions is feeling overwhelmed learning the software. We investigated whether navigation and feature presentation contributed to this problem.
+
+The challenge: users wouldn't explicitly connect navigation design to their sense of overwhelm. We needed to collect evidence showing the current navigation was problematic and present improved alternatives.
+
+## Problems Identified
+
+### Problem A: Categorization
+
+The current top-level organization divided 32 features into four groups: sales, project management, file management, and financials. Card sorting research at a 60% agreement threshold showed users couldn't reach consensus on feature categorization.
+
+<img src="/images/projects/navigation-redesign/card-sort.png" alt="Dendrogram of card sorting results showing difficulty reaching consensus" />
+
+<Callout type="insight">
+The dendrogram of card sorting results showed it was difficult for users to agree on what groups certain features belong to. For example, the estimating feature was split — some viewed it as sales-related, others as financial.
+</Callout>
+
+### Problem B: Feature Usage
+
+Usage data revealed the average user utilized only four features. This raised the question: did all 32 features need constant accessibility?
+
+<img src="/images/projects/navigation-redesign/feature-usage.png" alt="Feature usage data showing most users only use 4 features" />
+
+### Problem C: Job Menu
+
+The job menu filtering component had two issues: its visual design didn't communicate its filter functionality, and it consumed excessive screen real estate despite infrequent job switching.
+
+<img src="/images/projects/navigation-redesign/job-menu.png" alt="Current job menu taking up excessive screen space" />
+
+## Proposed Solutions
+
+Our redesign was grounded in three design principles:
+
+<ProcessStep number={1} title="Clear Hierarchy">
+Shifted feature navigation to the left sidebar (expanding on hover) since users switch features more frequently than jobs. This prioritized workspace real estate — what matters most to users.
+</ProcessStep>
+
+<ProcessStep number={2} title="Mental Model Alignment">
+Redesigned the job menu as a dropdown filter positioned top-left, using standard UI conventions so users immediately understood its filtering purpose.
+</ProcessStep>
+
+<ProcessStep number={3} title="Personalization and Customization">
+Limited the feature set to eight core features with three recently-used features below a divider line. Users could customize and pin features, and the system used usage data to surface frequently-accessed features.
+</ProcessStep>
+
+<BeforeAfter beforeLabel="Collapsed sidebar" afterLabel="Expanded on hover">
+  <img src="/images/projects/navigation-redesign/nav-collapsed.png" alt="Redesigned navigation in collapsed state" />
+  <img src="/images/projects/navigation-redesign/nav-expanded.png" alt="Redesigned navigation expanded on hover" />
+</BeforeAfter>
+
+## User Testing Results
+
+We tested the current versus redesigned navigation with 20 users (10 per version):
+
+- **System Usability Scale:** Existing scored 84.24/100; proposed scored **96/100** (+11.76 points)
+- **Feature navigation speed:** Proposed was **3.6 seconds faster** on average
+- **Sidebar default features:** **6.5 seconds faster** on average
+- **Job menu switching:** Decreased from 23 seconds to **14.5 seconds** (8.5s improvement)
+
+## Outcome
+
+Leadership response was lukewarm. While some stakeholders aligned on the identified problems and appreciated the solution, organizational priority shifts led to deprioritizing navigation changes.
+
+## Takeaways
+
+<Callout type="note">
+Proving that abstract navigation issues directly caused churn was difficult. We successfully identified real problems and proposed measurable improvements, but struggled to draw a direct line between navigation changes and churn reduction. When the organization revisits this problem, the foundational research and ideas are ready to build from.
+</Callout>
