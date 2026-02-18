@@ -26,12 +26,12 @@ export default function ContactPage() {
             LinkedIn
           </h2>
           <a
-            href="https://linkedin.com/in/alecdavy"
+            href="https://www.linkedin.com/in/alec-davy/"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-block text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
           >
-            linkedin.com/in/alecdavy
+            linkedin.com/in/alec-davy
           </a>
         </div>
       </div>
