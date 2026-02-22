@@ -16,9 +16,9 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="border-b border-gray-200 bg-white">
+    <header className="border-b [border-color:var(--bd)] [background-color:var(--bg)]" style={{ fontFamily: "var(--font-heading)" }}>
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
+        <Link href="/" className="text-lg tracking-tight [color:var(--fg)]" style={{ fontWeight: 350 }}>
           Alec Davy
         </Link>
 
@@ -28,9 +28,10 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors hover:text-gray-900 ${
-                pathname === link.href ? "text-gray-900" : "text-gray-500"
+              className={`text-sm transition-colors hover:[color:var(--fg)] ${
+                pathname === link.href ? "[color:var(--fg)]" : "[color:var(--muted)]"
               }`}
+              style={{ fontWeight: 350 }}
             >
               {link.label}
             </Link>
@@ -39,7 +40,7 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden"
+          className="md:hidden [color:var(--fg)]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -61,16 +62,17 @@ export default function Header() {
 
       {/* Mobile nav */}
       {menuOpen && (
-        <nav className="border-t border-gray-200 px-6 py-4 md:hidden">
+        <nav className="border-t [border-color:var(--bd)] px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className={`text-sm transition-colors hover:text-gray-900 ${
-                  pathname === link.href ? "text-gray-900" : "text-gray-500"
+                className={`text-sm transition-colors hover:[color:var(--fg)] ${
+                  pathname === link.href ? "[color:var(--fg)]" : "[color:var(--muted)]"
                 }`}
+                style={{ fontWeight: 350 }}
               >
                 {link.label}
               </Link>

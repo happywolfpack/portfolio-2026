@@ -9,23 +9,23 @@ export default function Home() {
     <div className="mx-auto max-w-5xl px-6 py-16">
       {/* Hero */}
       <section className="mb-16">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="text-4xl tracking-tight [color:var(--fg)] sm:text-5xl">
           Alec Davy
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-gray-600">
+        <p className="mt-4 max-w-2xl text-lg [color:var(--muted)]">
           UX &amp; Product Designer crafting thoughtful digital experiences. I focus on
           understanding people and translating their needs into intuitive, impactful products.
         </p>
         <div className="mt-6 flex gap-4">
           <Link
             href="/work"
-            className="rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-700"
+            className="rounded-lg [background-color:var(--fg)] px-5 py-2.5 text-sm font-medium [color:var(--bg)] transition-opacity hover:opacity-80"
           >
             View Work
           </Link>
           <Link
             href="/about"
-            className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
+            className="rounded-lg border [border-color:var(--bd)] px-5 py-2.5 text-sm font-medium [color:var(--fg)] transition-colors hover:[background-color:var(--sf)]"
           >
             About Me
           </Link>
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Featured Projects */}
       {featured.length > 0 && (
         <section>
-          <h2 className="mb-8 text-sm font-medium uppercase tracking-wider text-gray-400">
+          <h2 className="mb-8 text-sm font-medium uppercase tracking-wider [color:var(--muted-strong)]">
             Featured Work
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">

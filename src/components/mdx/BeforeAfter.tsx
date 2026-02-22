@@ -15,10 +15,10 @@ export default function BeforeAfter({
         {children}
       </div>
       <div className="mt-2 grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <p className="text-center text-xs font-medium uppercase tracking-wider text-gray-400">
+        <p className="text-center text-xs font-medium uppercase tracking-wider [color:var(--muted-strong)]">
           {beforeLabel}
         </p>
-        <p className="text-center text-xs font-medium uppercase tracking-wider text-gray-400">
+        <p className="text-center text-xs font-medium uppercase tracking-wider [color:var(--muted-strong)]">
           {afterLabel}
         </p>
       </div>

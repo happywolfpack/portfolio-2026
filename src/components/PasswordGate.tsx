@@ -39,10 +39,10 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
   if (authenticated) return <>{children}</>;
 
   return (
-    <div className="flex min-h-screen items-center justify-center px-6">
+    <div className="flex min-h-screen items-center justify-center [background-color:var(--bg)] px-6">
       <div className="w-full max-w-sm">
-        <h1 className="text-2xl font-bold tracking-tight text-gray-900">Alec Davy</h1>
-        <p className="mt-2 text-sm text-gray-500">
+        <h1 className="text-2xl tracking-tight [color:var(--fg)]">Alec Davy</h1>
+        <p className="mt-2 text-sm [color:var(--muted)]">
           Enter the password to view this portfolio.
         </p>
         <form onSubmit={handleSubmit} className="mt-6">
@@ -55,14 +55,14 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             }}
             placeholder="Password"
             autoFocus
-            className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none transition-colors focus:border-gray-900"
+            className="w-full rounded-lg border [border-color:var(--bd)] [background-color:var(--bg)] px-4 py-2.5 text-sm [color:var(--fg)] outline-none transition-colors focus:[border-color:var(--fg)]"
           />
           {error && (
             <p className="mt-2 text-sm text-red-500">Incorrect password. Try again.</p>
           )}
           <button
             type="submit"
-            className="mt-3 w-full rounded-lg bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-gray-700"
+            className="mt-3 w-full rounded-lg [background-color:var(--fg)] px-5 py-2.5 text-sm font-medium [color:var(--bg)] transition-opacity hover:opacity-80"
           >
             Enter
           </button>

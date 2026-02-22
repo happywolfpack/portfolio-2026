@@ -10,8 +10,8 @@ export default function WorkPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900">Work</h1>
-      <p className="mt-2 text-gray-600">Selected projects and case studies.</p>
+      <h1 className="text-3xl tracking-tight [color:var(--fg)]">Work</h1>
+      <p className="mt-2 [color:var(--muted)]">Selected projects and case studies.</p>
 
       <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
         {projects.map((project) => (
@@ -24,7 +24,7 @@ export default function WorkPage() {
       </div>
 
       {projects.length === 0 && (
-        <p className="mt-12 text-gray-400">Projects coming soon.</p>
+        <p className="mt-12 [color:var(--muted-strong)]">Projects coming soon.</p>
       )}
     </div>
   );

@@ -7,58 +7,72 @@
   font-display: swap;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --font-heading: "AT Realm", system-ui, sans-serif;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+:root {
+  --bg: #ffffff;
+  --fg: #171717;
+  --muted: #444444;
+  --muted-strong: #666666;
+  --bd: #e5e7eb;
+  --sf: #f9fafb;
+  --font-heading: "AT Realm", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --fg: #ededed;
+    --muted: #a1a1a1;
+    --muted-strong: #888888;
+    --bd: #262626;
+    --sf: #171717;
+  }
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg);
+  color: var(--fg);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 h1, h2, h3 {
   font-family: var(--font-heading);
+  font-weight: 350;
 }
 
 /* MDX prose defaults */
 .prose h2 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 350;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
-  color: #111;
+  color: var(--fg);
 }
 
 .prose h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 350;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
-  color: #111;
+  color: var(--fg);
 }
 
 .prose p {
   margin-bottom: 1.25rem;
   line-height: 1.7;
-  color: #444;
+  color: var(--muted);
 }
 
 .prose ul, .prose ol {
   margin-bottom: 1.25rem;
   padding-left: 1.5rem;
-  color: #444;
+  color: var(--muted);
 }
 
 .prose li {
